@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(154, 186, 233);
+    width:100%;
+    height:100vh;
+}
+.todo-container{
+    background-color: bisque;
+    max-width: 600px;
+    min-height: 250px;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.4) ;
+    
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+img{
+    width:50px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    
+}
+#input-field{
+    width:70%;
+    padding:10px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow:0 2px  6px rgba(0,0,0,0.3) inset;
+
+}
+.btn{
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    border:none;
+    color:white;
+    background-color: #2e2d2d;
+    cursor:pointer;
+    transition: all 0.4s;
+}
+.btn:hover{
+    background-color: #1147fa;
+
+}
+ul li{
+    list-style: none;
+    width:100%;
+    border:none;
+    padding:10px 50px;
+    border-radius: 10px;
+    margin-block: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    user-select: none;
+}
+ul li::before{
+    content:"";
+    background: rgb(9, 177, 233) url("undone.png");
+    background-size: cover;
+    position: absolute;
+    position: center;
+    top:8px;
+    left:8px;
+    width:30px;
+    height:30px;
+}
+.checked{
+    background-color: rgb(175, 237, 112);
+    color:rgb(43, 43, 44);
+}
+.checked::before{
+    background: url("donee.png");
+    width:30px;
+    height:30px;
+    background-size: cover;
+}
+span{
+    position: absolute;
+    right:10px;
+    font-size: 30px;
+    height:30px;
+    width:30px;
+    top:6px;
+    border-radius: 50px;
+    padding:1px 2px;
+    text-align: center;
+    cursor:pointer;
+}
+/* span:hover{
+    background-color: red;
+    color:black;
+} */
+ul li.checked span:hover{
+    background-color: red;
+    color:black;
+}
+
+
